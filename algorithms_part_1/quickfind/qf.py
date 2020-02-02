@@ -3,11 +3,11 @@ class QuickFind:
         self.storage = [i for i in range(size)]
         self.size = size
 
-    def connected(self, a, b):
+    def connected(self, a, b) -> bool:
         """ O(1) connection check """
         return self.storage[a] == self.storage[b]
 
-    def union(self, a, b):
+    def union(self, a, b) -> None:
         """ O(N) union op """
         if a > self.size or b > self.size:
             raise Exception("Index out of range. Please check component indexes and try again.")
